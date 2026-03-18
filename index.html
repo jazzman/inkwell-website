@@ -209,7 +209,7 @@
 
     <!-- Icon -->
   <div class="icon-wrap">
-    <img src="icon.png" alt="Inkwell app icon">
+      <img src="icon.png" alt="Inkwell app icon">
     <div class="icon-placeholder" style="width:100%;height:100%;background:#FAF7F4;display:none;align-items:center;justify-content:center;font-size:48px;">🖊️</div>
   </div>
 
@@ -220,15 +220,24 @@
   <div class="divider"></div>
 
   <!-- Email form -->
-  <form class="form" id="waitlistForm" onsubmit="handleSubmit(event)">
+  <form class="form" id="waitlistForm" 
+    action="https://gmail.us14.list-manage.com/subscribe/post?u=5848b7768a0044d0c93ee6372&amp;id=3a6e5ff768&amp;f_id=004290e1f0"
+    method="post"
+    target="_blank"
+    onsubmit="handleSubmit(event)">
     <input
       class="email-input"
       type="email"
+      name="EMAIL"
       id="emailInput"
       placeholder="your@email.com"
       required
       autocomplete="email"
     >
+    <!-- Mailchimp bot protection -->
+    <div style="position:absolute;left:-5000px" aria-hidden="true">
+      <input type="text" name="b_5848b7768a0044d0c93ee6372_3a6e5ff768" tabindex="-1" value="">
+    </div>
     <button class="submit-btn" type="submit">
       Join the waitlist
     </button>
