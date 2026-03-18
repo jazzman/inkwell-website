@@ -264,19 +264,12 @@
 <footer>inkwellapp.io</footer>
 
 <script>
-  function handleSubmit(e) {
-    e.preventDefault();
-    const email = document.getElementById('emailInput').value;
-
-    // Hide form, show success
-    document.getElementById('waitlistForm').style.display = 'none';
-    const msg = document.getElementById('successMsg');
-    msg.classList.add('visible');
-
-    // TODO: Replace this with your Mailchimp form action URL
-    // fetch('YOUR_MAILCHIMP_URL', { method: 'POST', body: ... })
-    console.log('Email submitted:', email);
-  }
+    function handleSubmit(e) {
+      // Don't prevent default — let the form submit to Mailchimp in new tab
+      // Show success message on this page simultaneously
+      document.getElementById('waitlistForm').style.display = 'none';
+      document.getElementById('successMsg').classList.add('visible');
+    }
 </script>
 
 </body>
